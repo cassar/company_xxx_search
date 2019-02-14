@@ -9,9 +9,11 @@ class Result
     @relationships = complile_relationships
   end
 
+  MAX_RETURN = 5
+
   def to_s
     output = "Q#{@query.number}: "
-    @relationships.each do |relationship|
+    @relationships.shift(MAX_RETURN).each do |relationship|
       output += "P#{relationship.classification.number} "
     end
     output.strip + "\n"
