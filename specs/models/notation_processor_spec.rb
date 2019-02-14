@@ -16,11 +16,8 @@ RSpec.describe NotationProcessor do
 
     notation_processor = NotationProcessor.new(queries, classifications)
 
-    answer = ''
-    answer += "Q1: P2 P1 P3\n"
-    answer += "Q2: P1 P3 P2\n"
-    answer += "Q3: P1 P3 P2\n"
+    output = File.new('specs/fixtures/processor_output.txt').read
 
-    expect(notation_processor.to_s).to eq(answer)
+    expect(notation_processor.to_s).to eq(output)
   end
 end
