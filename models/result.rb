@@ -15,6 +15,8 @@ class Result
 
   private
 
+  # Creates relationships for a given query against a group of classifications.
+  # Will disgard any relationships that have a score of 0.
   def complile_relationships
     relationships = []
     @classifications.each do |classification|
