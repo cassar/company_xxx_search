@@ -14,13 +14,7 @@ RSpec.describe NotationParser do
     classifications << Notation.new(2, %w[ford car review])
     classifications << Notation.new(3, %w[ford chicken review])
 
-    input = ''
-    input += "Q ford car\n"
-    input += "P ford chicken review\n"
-    input += "Q ford chicken car\n"
-    input += "P ford car review\n"
-    input += "Q dog chicken car\n"
-    input += "P ford chicken review\n"
+    input = File.new('specs/fixtures/parser_input.txt').read
 
     notation_parser = NotationParser.new(input)
 
