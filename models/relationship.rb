@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Computes the weighted score between a query and a given page classification.
 class Relationship
   include Comparable
 

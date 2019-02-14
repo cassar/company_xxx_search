@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+# Computes the search result for a query against a group of page
+# classifications.
 class Result
   def initialize(query, classifications)
     @query = query

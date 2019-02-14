@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+# Compiles the results for each query against a collection of page
+# classifications.
 class NotationProcessor
   def initialize(queries, classifications)
     @queries = queries
