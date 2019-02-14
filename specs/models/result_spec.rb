@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../models/result'
+require_relative '../../models/result'
 
 RSpec.describe Result do
   it 'creates an new result and outputs the correct output' do

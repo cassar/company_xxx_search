@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../models/relationship'
+require_relative '../../models/relationship'
 
 RSpec.describe Relationship do
   it 'creates a new Relationship and is able to be access properties' do

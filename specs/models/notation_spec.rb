@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../models/notation'
+require_relative '../../models/notation'
 
 RSpec.describe Notation do
   it 'creates a new notation and is able to be accessed' do

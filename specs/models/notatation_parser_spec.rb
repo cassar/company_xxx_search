@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../models/notation_parser'
+require_relative '../../models/notation_parser'
 
 RSpec.describe NotationParser do
   it 'creates an new notation parser and outputs the correct output' do
