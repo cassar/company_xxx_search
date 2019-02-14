@@ -36,6 +36,9 @@ RSpec.describe NotationParser do
       expect(parse_classification.items).to eq(classification.items)
     end
 
+    lower_id = input + "q ford chicken review\n"
+    expect { NotationParser.new(lower_id) }.to raise_error(StandardError)
+
     wrong_id = input + "X ford chicken review\n"
     expect { NotationParser.new(wrong_id) }.to raise_error(StandardError)
 
