@@ -11,6 +11,6 @@ RSpec.describe Result do
 
     result = Result.new(query, classifications)
 
-    expect(result.to_s).to eq('Q1: P2 P1 P3')
+    expect(result.to_s).to eq("Q1: P2 P1 P3\n")
   end
 end

@@ -10,7 +10,7 @@ class Result
     @relationships.each do |relationship|
       output << "P#{relationship.classification.number} "
     end
-    output.strip
+    output.strip + "\n"
   end
 
   private
