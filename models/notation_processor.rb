@@ -11,7 +11,7 @@ class NotationProcessor
 
   def to_s
     output = ''
-    @results.each { |result| output << result.to_s }
+    @results.each { |result| output += result.to_s }
     output
   end
 

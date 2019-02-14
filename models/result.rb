@@ -12,7 +12,7 @@ class Result
   def to_s
     output = "Q#{@query.number}: "
     @relationships.each do |relationship|
-      output << "P#{relationship.classification.number} "
+      output += "P#{relationship.classification.number} "
     end
     output.strip + "\n"
   end
