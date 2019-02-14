@@ -2,7 +2,7 @@
 
 # Compiles the results for each query against a collection of page
 # classifications.
-class NotationProcessor
+class SearchProcessor
   def initialize(input)
     parser = NotationParser.new(input)
     @queries = parser.queries
