@@ -3,18 +3,10 @@
 require_relative '../../models/notation_processor'
 
 RSpec.describe NotationProcessor do
-  it 'creates an new notation processor and outputs the correct output' do
-    queries = []
-    queries << Notation.new(1, %w[ford car])
-    queries << Notation.new(2, %w[ford chicken car])
-    queries << Notation.new(3, %w[dog chicken car])
+  it 'creates a new notation processor and outputs correctly' do
+    input = File.new('specs/fixtures/processor_input.txt').read
 
-    classifications = []
-    classifications << Notation.new(1, %w[ford chicken review])
-    classifications << Notation.new(2, %w[ford car review])
-    classifications << Notation.new(3, %w[ford chicken review])
-
-    notation_processor = NotationProcessor.new(queries, classifications)
+    notation_processor = NotationProcessor.new(input)
 
     output = File.new('specs/fixtures/processor_output.txt').read
 

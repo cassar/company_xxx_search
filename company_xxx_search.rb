@@ -8,7 +8,6 @@ require_relative 'models/notation_processor'
 # A single page application to review results.
 class CompanyXXXSearch < Sinatra::Base
   get '/' do
-    parser = NotationParser.new(params[:input])
-    NotationProcessor.new(parser.queries, parser.classifications).to_s
+    NotationProcessor.new(params[:input]).to_s
   end
 end

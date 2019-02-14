@@ -3,9 +3,10 @@
 # Compiles the results for each query against a collection of page
 # classifications.
 class NotationProcessor
-  def initialize(queries, classifications)
-    @queries = queries
-    @classifications = classifications
+  def initialize(input)
+    parser = NotationParser.new(input)
+    @queries = parser.queries
+    @classifications = parser.classifications
     @results = process_notations
   end
 
