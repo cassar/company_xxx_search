@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'active_support/all'
 # Computes the weighted score between a query and a given page classification.
 class Relationship
@@ -11,7 +12,7 @@ class Relationship
   end
 
   # The maximum number of key words.
-  N = 8
+  FIRST_INTEGER_WEIGHT = 8
 
   attr_accessor :score, :classification
 
@@ -30,12 +31,12 @@ class Relationship
   # weighs of a match in equivalent elements.
   def compute_score
     @query.items.map.with_index do |element, index|
-      (weight(index) * weight(@classification.items.index(element)))
+      weight(index) * weight(@classification.items.index(element))
     end.sum
   end
 
   # Returns the weight of an element at a given index.
   def weight(index)
-    index.nil? ? 0 : (N - index)
+    index.nil? ? 0 : (FIRST_INTEGER_WEIGHT - index)
   end
 end
