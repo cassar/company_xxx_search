@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-
+require 'active_support/all'
 # Computes the weighted score between a query and a given page classification.
 class Relationship
   include Comparable
@@ -29,11 +29,9 @@ class Relationship
   # Computes the score of a relationship as the sum of the products of the
   # weighs of a match in equivalent elements.
   def compute_score
-    products = []
-    @query.items.each_with_index do |element, index|
-      products << (weight(index) * weight(@classification.items.index(element)))
-    end
-    products.sum
+    @query.items.map.with_index do |element, index|
+      (weight(index) * weight(@classification.items.index(element)))
+    end.sum
   end
 
   # Returns the weight of an element at a given index.
