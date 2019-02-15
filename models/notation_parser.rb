@@ -6,7 +6,7 @@ require_relative 'notation'
 # and classifications).
 # Will raise StandardError exception if input entred incorrectly.
 class NotationParser
-  def initialize(input)
+  def initialize(input = '')
     @queries = []
     @classifications = []
     parse(input)
