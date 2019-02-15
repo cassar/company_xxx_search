@@ -1,4 +1,5 @@
 # frozen_string_literal: true
 
-require './index'
-run Sinatra::Application
+require './company_xxx_search'
+
+run CompanyXXXSearch

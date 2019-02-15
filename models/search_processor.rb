@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require_relative 'notation_parser'
+require_relative 'result'
+
 # Compiles the results for each query against a collection of page
 # classifications.
 class SearchProcessor

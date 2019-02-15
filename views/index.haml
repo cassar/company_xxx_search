@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %title Company XXX Search
+  %body
+    %h1 Company XXX Search
+    %form{ action: '/', accept_charset: 'UTF-8', method: 'get'}
+      %div
+        %textarea{ name: 'input' }= params[:input]
+      %div
+        %input{ type: 'submit'}
+    - @output.split("\n").each do |line|
+      %p= line

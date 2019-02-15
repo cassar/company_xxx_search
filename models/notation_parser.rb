@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative 'notation'
+
 # Parses a given string of text into two groups of Notation instances (queries
 # and classifications).
 # Will raise StandardError exception if input entred incorrectly.

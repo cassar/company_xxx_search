@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative 'relationship'
+
 # Computes the search result for a query against a group of page
 # classifications.
 class Result
