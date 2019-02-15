@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'sinatra'
-require 'Haml'
+require 'haml'
 require_relative 'models/search_processor'
 
 # A single page application to review results.

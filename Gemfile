@@ -4,8 +4,8 @@ source 'https://rubygems.org'
 
 ruby '2.5.1'
 
-gem 'haml'
 gem 'sinatra'
+gem 'haml'
 
 group :test, :development do
   gem 'rack-test', require: 'rack/test'
