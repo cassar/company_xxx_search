@@ -8,5 +8,9 @@ RSpec.describe CompanyXXXSearch do
     get '/'
 
     expect(last_response).to be_ok
+
+    get '/', input: File.new('specs/fixtures/processor_input.txt').read
+
+    expect(last_response).to be_ok
   end
 end

@@ -9,11 +9,18 @@
   %body
     .container
       %h1 Company XXX Search
+      - if @output.nil?
+        - unless @error.nil?
+          .alert.alert-danger{ role: 'alert'}= @error
+        - else
+          .alert.alert-primary{ role: 'alert'}
+            Input query and page classification information below.
       %form{ action: '/', accept_charset: 'UTF-8', method: 'get'}
         %div.form-group
           %textarea.form-control{ name: 'input', rows: '6' }= params[:input]
         %div.form-group
           %button.btn.btn-primary{ type: 'submit'} Search
       %div{ style: 'background-color: #e9ecef;'}
-        - @output.split("\n").each do |line|
-          %p{ style: 'background-color: #e9ecef;'}= line
+        - unless @output.nil?
+          - @output.split("\n").each do |line|
+            %p{ style: 'background-color: #e9ecef;'}= line
