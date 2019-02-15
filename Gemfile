@@ -4,6 +4,10 @@ source 'https://rubygems.org'
 
 ruby '2.5.1'
 
-gem 'rack-test'
-gem 'rspec'
+gem 'haml'
 gem 'sinatra'
+
+group :test, :development do
+  gem 'rack-test', require: 'rack/test'
+  gem 'rspec'
+end
